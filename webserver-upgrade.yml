@@ -1,0 +1,10 @@
+---
+- name: Update OS & install Defaults
+  hosts: webservers
+  remote_user: root
+  
+  tasks:
+  - name: Upgrade OS
+    apt:
+      update_cache: yes
+      upgrade: dist
